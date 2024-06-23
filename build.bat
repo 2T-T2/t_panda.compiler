@@ -29,7 +29,7 @@ setlocal enabledelayedexpansion
     echo =============== コンパイル終了 ===============
     echo.
     echo =============== アーカイブ化開始 ===============
-    set jarCmd=jar -cf %dst_dir%t_panda.compiler.jar -C %out_dir% .
+    set jarCmd=jar -cf %dst_dir%t_panda.compiler.jar -C %out_dir% . -C src .
     echo %jarCmd%
     %jarCmd%
     if %errorlevel% neq 0 (
